@@ -1,6 +1,6 @@
 plugins:
   - uses:
-      - plugin: "https://ubiquity-os-plugin-demo-main.ubiquity.workers.dev"
+      - plugin: "https://5c3b-89-142-18-69.ngrok-free.app"
   - uses:
       - plugin: "https://ubiquity-os-command-wallet-main.ubiquity.workers.dev"
   - uses:
