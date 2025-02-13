@@ -1,0 +1,33 @@
+plugins:
+  - uses:
+      - plugin: "https://ubiquity-os-plugin-demo-main.ubiquity.workers.dev"
+  - uses:
+      - plugin: "https://ubiquity-os-command-wallet-main.ubiquity.workers.dev"
+  - uses:
+      - plugin: "ubiquity-os-marketplace/command-ask@main"
+        with:
+          model: "anthropic/claude-3.5-sonnet"
+          openAiBaseUrl: "https://openrouter.ai/api/v1"
+  - uses:
+      - plugin: "https://ubiquity-os-command-query-user-main.ubiquity.workers.dev"
+  - uses:
+      - plugin: "https://ubiquity-os-daemon-pricing-main.ubiquity.workers.dev"
+        skipBotEvents: false
+  - uses:
+      - plugin: "ubiquity-os-marketplace/text-conversation-rewards@main"
+        skipBotEvents: false
+        with:
+          incentives:
+            collaboratorOnlyPaymentInvocation: false
+            contentEvaluator: {}
+            userExtractor: {}
+            dataPurge: {}
+            formattingEvaluator: {}
+            permitGeneration: {}
+            githubComment: {}
+          evmPrivateEncrypted: "3GvQC6QgbWG_idDdfRTFSKl8lRR3ieT1W7tqtf-AqkQrWKZ8QRVbjMAXnhV5wDk3bwv_cXMJhzlg24DLtPV0wpVknAkluDncIsPvsceRPL0jlzK0hQVHcWjAbjRhR7GcY0ClEOjPyC8xVMPvPWFe-pCu4bPKJl3dFxeR4FaoDemJKlFQ"
+          evmNetworkId: 100
+  - uses:
+      - plugin: "ubiquity-os-marketplace/daemon-disqualifier@main"
+  - uses:
+      - plugin: "https://ubiquity-os-comment-vector-embeddings-main.ubiquity.workers.dev"
